@@ -128,3 +128,10 @@ function logout() {
     auth.classList.remove("hide");
     result.innerHTML = "";
 }
+
+// Cancel action
+function cancelAction() {
+    document.getElementById("input-area").classList.add("hide");
+    document.getElementById("menu").classList.remove("hide");
+    document.getElementById("result").innerHTML = "Action cancelled.";
+}

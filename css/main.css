@@ -80,6 +80,22 @@ button {
     letter-spacing: 2px;
 }
 
+.back-btn {
+    width: 80%;
+    margin-bottom: 10px;
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+    .back-btn:hover {
+        background: #e64545;
+    }
+
 @keyframes gradientBG {
     0% {
         background-position: 0% 50%;
