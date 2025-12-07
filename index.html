@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ATM Machine</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+
+    <div class="atm">
+        <h2>ATM Machine</h2>
+
+        <!-- LOGIN / REGISTER -->
+        <div id="auth">
+            <input id="username" type="text" placeholder="Username">
+            <input id="pin" type="password" placeholder="PIN">
+            <button onclick="login()">Login</button>
+            <button onclick="registerUser()">Register</button>
+        </div>
+
+        <!-- MAIN MENU -->
+        <div id="menu" class="hide">
+            <p id="welcome"></p>
+            <button onclick="startDeposit()">Deposit Money</button>
+            <button onclick="startWithdraw()">Withdraw Money</button>
+            <button onclick="showBalance()">Check Balance</button>
+            <button onclick="showHistory()">Transaction History</button>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+        <!-- NUMBER INPUT + KEYPAD -->
+        <div id="input-area" class="hide">
+            <p id="action-title"></p>
+            <input id="amount" type="text" readonly>
+
+            <div class="keypad">
+                <button onclick="num(1)">1</button><button onclick="num(2)">2</button><button onclick="num(3)">3</button>
+                <button onclick="num(4)">4</button><button onclick="num(5)">5</button><button onclick="num(6)">6</button>
+                <button onclick="num(7)">7</button><button onclick="num(8)">8</button><button onclick="num(9)">9</button>
+                <button onclick="clearAmount()">C</button><button onclick="num(0)">0</button><button onclick="confirmAmount()">OK</button>
+            </div>
+        </div>
+
+        <p id="result"></p>
+
+    </div>
+
+    <audio id="cashSound" src="sound/cash.mp3"></audio>
+</body>
+</html>

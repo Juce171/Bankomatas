@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #1d1f21, #2c3e50, #34495e, #1abc9c);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+}
+
+.atm {
+    width: 350px;
+    background: rgba(0, 0, 0, 0.6); /* semi-transparent */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+}
+
+
+/*.atm {
+    width: 350px;
+    background: #2c2f33;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px black;
+}*/
+
+input {
+    width: 80%;
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+button {
+    width: 80%;
+    padding: 10px;
+    margin: 6px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    background: #7289da;
+    color: white;
+}
+
+    button:hover {
+        background: #677bc4;
+    }
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 5px;
+    margin-top: 10px;
+}
+
+    .keypad button {
+        padding: 15px;
+        font-size: 18px;
+    }
+
+.hide {
+    display: none;
+}
+
+#amount {
+    width: 100%;
+    font-size: 22px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
